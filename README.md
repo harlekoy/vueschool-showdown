@@ -2,9 +2,12 @@
 
 ## Usage
 ### Update user command:
+
 Existing user update
+![ykXj53vWfe](https://user-images.githubusercontent.com/10015302/77813836-bafaa980-70e6-11ea-9b8e-1836f170ee7a.gif)
 
 Non-existing user update
+![rvn8jaLCka](https://user-images.githubusercontent.com/10015302/77813824-a61e1600-70e6-11ea-8597-3c2bf290a919.gif)
 
 ## Testing
 
