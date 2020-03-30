@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('mock/individual', 'MockApiController@individual')
+    ->name('mock.individual')
+    ->middleware('throttle:50,60');
+
+Route::post('mock/bulk', 'MockApiController@bulk')
+    ->name('mock.bulk')
+    ->middleware('throttle:3600,60');

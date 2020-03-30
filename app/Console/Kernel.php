@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use App\Console\Commands\CastMakeCommand;
+use App\Console\Commands\ThirdPartyBulkUpdateCommand;
 use App\Console\Commands\UserUpdateCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -17,6 +18,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         UserUpdateCommand::class,
         CastMakeCommand::class,
+        ThirdPartyBulkUpdateCommand::class,
     ];
 
     /**
@@ -27,7 +29,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        // Sync user attributes to third-party provider
+        $schedule->command('bulk:update')->everyMinute();
     }
 
     /**

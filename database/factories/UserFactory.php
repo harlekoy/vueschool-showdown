@@ -19,11 +19,11 @@ use Illuminate\Support\Str;
 
 $factory->define(User::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
+        'name'              => $faker->name,
+        'email'             => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
-        'password' => 'password',
-        'timezone' => $faker->randomElement(['CET', 'CST', 'GMT+1']),
-        'remember_token' => Str::random(10),
+        'password'          => 'password',
+        'timezone'          => $faker->randomElement(['CET', 'CST', 'GMT+1']),
+        'remember_token'    => Str::random(10),
     ];
 });

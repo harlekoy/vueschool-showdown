@@ -64,6 +64,11 @@ return [
             'endpoint' => env('AWS_URL'),
         ],
 
+        'snapshots' => [
+            'driver' => 'local',
+            'root' => database_path('snapshots'),
+        ],
+
     ],
 
     /*
